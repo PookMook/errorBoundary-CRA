@@ -2,8 +2,12 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import App from './App.js';
 import * as serviceWorker from './serviceWorker';
+import { withErrorBoundary } from "./errorHandling/errorBoundary";
+import { ErrorMessage } from "./errorHandling/errorMessage";
 
-ReactDOM.render(<App />, document.getElementById('root'));
+const ErrorMessageWithErrorBoundary = withErrorBoundary(ErrorMessage);
+
+ReactDOM.render(<ErrorMessageWithErrorBoundary><App /></ErrorMessageWithErrorBoundary>, document.getElementById('root'));
 
 // If you want your app to work offline and load faster, you can change
 // unregister() to register() below. Note this comes with some pitfalls.
