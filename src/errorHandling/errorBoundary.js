@@ -33,7 +33,7 @@ export const withErrorBoundary = (
         return <BaseComponent {...restProps} error={error}/>;
       }
 
-      return children;
+      return <><p>Error Protected</p>{children}</>;
     }
   };
 };

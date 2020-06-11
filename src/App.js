@@ -17,7 +17,7 @@ const BrokenButton = () => {
   const throwError = useError();
 
   if (shouldRenderBrokenComponent) {
-    return <BrokenComponent />;
+    return <ErrorMessageWithErrorBoundary><BrokenComponent /></ErrorMessageWithErrorBoundary>;
   }
 
   return (

@@ -10,7 +10,7 @@ export const ErrorMessage = ({
       <button
       type="button"
         onClick={() => {
-          window.refresh();
+          window.location.reload();
         }}
       >
         {`refresh`}
